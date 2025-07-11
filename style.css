@@ -1,0 +1,241 @@
+/* stylelint-disable font-family-name-quotes */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+--stone-100: hsl(30deg 54% 90%);
+--stone-150: hsl(30deg 18% 87%);
+--stone-600: hsl(30deg 10% 34%);
+--stone-900: hsl(24deg 5% 18%);
+--brown-800: hsl(14deg 45% 36%);
+--rose-800: hsl(332deg 51% 32%);
+--rose-50: hsl(330deg 100% 98%);
+}
+
+
+body {
+min-height: 100vh;
+  overflow-y: auto;    
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+    background-color: var(--stone-100);
+
+    /* Full height of the screen */
+    font-family: 'Outfit',sans-serif;
+    font-weight: 400;
+    color: var(--stone-900);
+    line-height: 2;
+    margin: 0;
+
+    /* Use Flexbox layout */
+    display: flex;
+
+    /* Stack elements vertically */
+    flex-direction: column;
+
+    /* Center horizontally */
+    justify-content: center;
+
+    /* Center vertically */
+    align-items: center;
+    font-size: 16px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--stone-150);
+    margin-top: 2em;
+
+    /* needed to not shrink to zero width in flex container */
+    align-self: stretch;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    padding: 2.2rem;
+    width: 48rem;
+    text-align: left;
+    row-gap: 1.5rem;
+    place-items: center stretch;
+    justify-content: center;
+    background-color: white;
+}
+
+.card b{
+    font-weight: 600;
+}
+
+.card p{
+    width: 100%;
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+.card img {
+    display: block;
+    width:100%;
+    height:auto;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.card h1 {
+    /*font-size: clamp(1rem, 2vw, 1.3125rem);*/
+    font-size: 2.5rem;
+    font-family: "Young Serif";
+    font-weight: 800;
+    color:var(--stone-900);
+    cursor: pointer;
+    text-align: left;
+    justify-self: left;
+    width: 100%;
+
+}
+
+.card h2 {
+    color: var(--brown-800);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    margin-left: -0.5rem;
+    font-weight:600;
+    text-align: left;
+    font-family: "Young Serif", serif;
+}
+
+.card-preparation{
+    background-color: var(--rose-50);
+    width: 100%;
+    padding: 1em 3em;
+    border-radius: 1em;
+}
+
+.card-preparation .insideblock{
+    width: 95%;
+}
+
+.card-preparation ul{
+    text-align: left;
+    
+}
+
+.card-preparation li{
+    padding-left: 1em;
+}
+
+.card-preparation h2{
+    color: var(--rose-800);
+    font-family: "Outfit", sans-serif;
+    font-size: 1.5rem;
+    margin-left: -1rem;
+}
+
+.card-ingredients{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.card-ingredients .insideblock{
+    width: 95%;
+    padding-left: 1rem;
+}
+
+.card-ingredients ul{
+    width: 95%;
+    text-align: left;
+    list-style-position: outside;
+    
+}
+
+.card-ingredients li{
+    padding-left: 1em;
+}
+
+        
+.card-instructions{
+    width: 100%;
+    background-color: white;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.card-instructions .insideblock{
+    width: 95%;
+    padding-left: 1rem;
+}
+
+.card-instructions ol{
+    text-align: left;
+    list-style-position: outside;
+    
+}
+
+.card-instructions li::marker{
+    color: var(--brown-800);
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
+    font: "Outfit",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.card-instructions li{
+    padding-left: 1em;
+}
+
+.card-nutrition{
+    width: 100%;
+    background-color: white;
+    text-align: left;    padding-left: 1em;
+}
+
+.card-nutrition .insideblock{
+    width: 95%;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.card-nutrition ul{
+    width: 95%;
+    text-align: left;
+    list-style-position: outside;
+    
+}
+
+.card-nutrition li{
+    padding-left: 1em;
+}
+
+.card .nutritiontable{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .nutritiontable-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+}
+
+.card .nutritiontable-row .tablecell1{
+    color: var(--stone-900);
+    width:50%;
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    /* stylelint-disable-next-line declaration-property-value-no-unknown */
+    font-family: "Outfit" sans-serif;
+}
+
+.card .nutritiontable-row .tablecell2{
+    color: var(--brown-800);
+    font-weight: 800;
+    font-family: "Outfit" sans-serif;
+}
